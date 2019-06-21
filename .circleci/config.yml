@@ -8,7 +8,7 @@ tests_steps: &tests_steps
     - run:
         name: Prepare Docker Compose
         command: |
-          if [ -f docker-compose.yml ]; then
+          if [ ! -f docker-compose.yml ]; then
             cp ./.circleci/docker-compose.override.yml docker-compose.yml
           else
             if [ -f ./.circleci/docker-compose.override.yml ]; then
