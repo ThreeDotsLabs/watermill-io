@@ -10,7 +10,7 @@ import (
 
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/ThreeDotsLabs/watermill/message"
-	"github.com/ThreeDotsLabs/watermill/message/infrastructure/io"
+	"github.com/ThreeDotsLabs/watermill-io/pkg/io"
 )
 
 func TestLosslessMarshaler(t *testing.T) {

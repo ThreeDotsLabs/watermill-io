@@ -1,15 +1,16 @@
 package io_test
 
 import (
-	"github.com/ThreeDotsLabs/watermill"
 	"testing"
+
+	"github.com/ThreeDotsLabs/watermill"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
 	"github.com/ThreeDotsLabs/watermill/message"
-	"github.com/ThreeDotsLabs/watermill/message/infrastructure/io"
+	"github.com/ThreeDotsLabs/watermill-io/pkg/io"
 )
 
 var errWritingOnClosedWriter = errors.New("mockWriter is closed")
