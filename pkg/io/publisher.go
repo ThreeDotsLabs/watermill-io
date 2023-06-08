@@ -52,7 +52,7 @@ func NewPublisher(wc io.WriteCloser, config PublisherConfig, logger watermill.Lo
 // Publish writes the messages to the underlying io.Writer.
 //
 func (p *Publisher) Publish(topic string, messages ...*message.Message) error {
-	if p.closed == true {
+	if p.closed {
 		return errors.New("publisher is closed")
 	}
 
