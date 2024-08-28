@@ -20,6 +20,9 @@ test_reconnect:
 
 wait:
 
+test_codecov: up wait
+	go test -coverprofile=coverage.out -covermode=atomic ./...
+
 build:
 	go build ./...
 
