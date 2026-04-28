@@ -134,6 +134,9 @@ func (s *Subscriber) consume(ctx context.Context, topic string, output chan *mes
 				s.logger.Debug("Read channel closed, breaking read loop", nil)
 				return
 			}
+		case <-ctx.Done():
+			s.logger.Debug("Context closed, breaking read loop", nil)
+			return
 		case <-s.closing:
 			s.logger.Debug("Subscriber closing, breaking read loop", nil)
 			return
